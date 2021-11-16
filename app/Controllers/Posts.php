@@ -14,9 +14,6 @@ class Posts extends BaseController
         $user_model = new User_model();
 
 
-
-
-
         $data['posts'] = $post_model->orderBy('created_at', 'desc');
         $data['posts'] = $post_model->paginate(3);
         $data['pager'] = $post_model->pager;
